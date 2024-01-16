@@ -64,4 +64,43 @@ WHERE name = 'Anna';
 ```
 ![image](https://github.com/CheAm1337/select/assets/115126424/2d6e936e-c03d-45b5-b4b1-fb28cbfd8f5a)
 
+## Task - 1
+
+```sql
+SELECT
+	pizzeria_id,
+	pizza_name
+FROM menu
+UNION
+SELECT id, name FROM person ORDER BY pizzeria_id, pizza_name;
+```
+![image](https://github.com/CheAm1337/select/assets/115126424/f8a9eae8-3396-4a37-af06-6050a94865bd)
+
+
+## Task - 2
+
+```sql
+SELECT
+	name,'person' AS source
+FROM person
+UNION ALL
+SELECT pizza_name, 'menu' AS source FROM menu ORDER BY source,name;
+```
+![image](https://github.com/CheAm1337/select/assets/115126424/43025240-4bbd-4100-82aa-40d854b9f78c)
+
+
+
+## Task - 3
+
+```sql
+SELECT
+	po.order_date,
+	po.person_id,
+	v.visit_date
+FROM person_order po
+JOIN person_visits v ON po.person_id = v.person_id
+AND po.order_date = v.visit_date
+ORDER BY visit_date ASC, person_id DESC;
+```
+![image](https://github.com/CheAm1337/select/assets/115126424/5bf336d2-1733-4159-ad63-06a685c51fa2)
 
