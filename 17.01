@@ -1,0 +1,6 @@
+SELECT object_name FROM (
+	SELECT name AS object_name, 'person' as type FROM person
+	UNION ALL
+	SELECT pizza_name, 'pizza' FROM menu
+	ORDER BY type, object_name
+	) as tab
