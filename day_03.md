@@ -1,4 +1,4 @@
-![image](https://github.com/CheAm1337/select/assets/115126424/f7cd4e54-5611-4688-9366-4c5ead873a7c)#SQL
+#SQL
 
 ## Task - 00
 ```sql
