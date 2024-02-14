@@ -15,7 +15,7 @@ order by sum desc
 LIMIT 3;
 ```
 ![image](https://github.com/CheAm1337/select/assets/115126424/c58065b3-fa9c-4d35-8bce-b9dde32967e0)
-![image](https://github.com/CheAm1337/select/assets/115126424/849e29da-c998-4c61-b8b3-b06d4e45860c)
+
 
 ## Task - 2
 ```sql
@@ -62,7 +62,8 @@ ORDER BY AVG(price) ASC
 LIMIT 1;
 ```
 ![image](https://github.com/CheAm1337/select/assets/115126424/57d3e9c9-96f1-4c4c-b7f4-3b290716f03b)
-![image](https://github.com/CheAm1337/select/assets/115126424/57d3e9c9-96f1-4c4c-b7f4-3b290716f03b)
+![image](https://github.com/CheAm1337/select/assets/115126424/285316cf-bceb-47d4-a87e-318651136265)
+
 ## Task - 5
 ```sql
 DELETE FROM Orders
