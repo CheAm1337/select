@@ -53,16 +53,15 @@ FROM Products
 GROUP BY category
 ORDER BY AVG(price) DESC
 LIMIT 1;
-![image](https://github.com/CheAm1337/select/assets/115126424/57d3e9c9-96f1-4c4c-b7f4-3b290716f03b)
 
 SELECT category as low
 FROM Products
 GROUP BY category
 ORDER BY AVG(price) ASC
 LIMIT 1;
-![image](https://github.com/CheAm1337/select/assets/115126424/c6773fca-734d-416c-9e20-8e65d0b39ae3)
 ```
-
+![image](https://github.com/CheAm1337/select/assets/115126424/57d3e9c9-96f1-4c4c-b7f4-3b290716f03b)
+![image](https://github.com/CheAm1337/select/assets/115126424/57d3e9c9-96f1-4c4c-b7f4-3b290716f03b)
 ## Task - 5
 ```sql
 DELETE FROM Orders
