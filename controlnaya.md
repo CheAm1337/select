@@ -18,8 +18,25 @@ LIMIT 3;
 
 ## Task - 2
 ```sql
-
+CREATE OR REPLACE VIEW avg_order_cost_deviation AS
+SELECT 
+    customer_id,
+    AVG(total_cost) AS avg_order_cost,
+    AVG(total_cost) - (SELECT AVG(total_cost) FROM (SELECT SUM(price * quantity) AS total_cost 
+													FROM Orders JOIN Products USING (product_id) 
+													GROUP BY order_id) AS overall_avg) AS deviation
+FROM (
+    SELECT 
+        order_id, 
+        customer_id,
+        SUM(price * quantity) AS total_cost
+    FROM Orders
+    JOIN Products USING (product_id)
+    GROUP BY order_id, customer_id
+) AS order_costs
+GROUP BY customer_id;
 ```
+![image](https://github.com/CheAm1337/select/assets/115126424/6ff391f3-4fbd-484d-9ca7-7a8920c9ea0f)
 
 ## Task - 3
 ```sql
