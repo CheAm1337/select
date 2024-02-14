@@ -16,6 +16,10 @@ LIMIT 3;
 ```
 ![image](https://github.com/CheAm1337/select/assets/115126424/c58065b3-fa9c-4d35-8bce-b9dde32967e0)
 
+## Task - 2
+```sql
+
+```
 
 ## Task - 3
 ```sql
@@ -42,7 +46,16 @@ LIMIT 1;
 ![image](https://github.com/CheAm1337/select/assets/115126424/c6773fca-734d-416c-9e20-8e65d0b39ae3)
 ```
 
-## Task - 3
+## Task - 
 ```sql
+DELETE FROM Orders
+WHERE order_id IN (
+    SELECT o.order_id
+    FROM Orders o
+    JOIN (
+        SELECT AVG(quantity) AS avg_quantity
+        FROM Orders
+    ) AS avg_orders ON o.quantity > avg_orders.avg_quantity
+);
 
 ```
