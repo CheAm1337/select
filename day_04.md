@@ -57,3 +57,29 @@ WHERE NOT EXISTS (
 ORDER BY 1;
 ```
 ![image](https://github.com/CheAm1337/select/assets/115126424/26756be8-1f33-4319-99b9-b3e7e19a90e2)
+
+
+## Task - 04
+```sql
+CREATE VIEW v_price_with_discount AS
+SELECT 
+    p.name AS name,
+    m.pizza_name AS pizza_name,
+    m.price AS price,
+    ROUND(m.price - (m.price * 0.1)) AS discount_price
+FROM 
+    person_order po
+JOIN 
+    menu m ON po.menu_id = m.id
+JOIN 
+    person p ON po.person_id = p.id
+ORDER BY 
+    p.name,
+    m.pizza_name;
+```
+![image](https://github.com/CheAm1337/select/assets/115126424/58a8e1cb-8602-4be3-8ef7-75088ee817bb)
+
+## Task - 05
+```sql
+
+```
