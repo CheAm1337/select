@@ -67,5 +67,21 @@ SELECT
 
 ## Task - 04
 ```sql
-
+ALTER TABLE person_discounts
+    ADD CONSTRAINT ch_nn_person_id CHECK (person_id IS NOT NULL),
+    ADD CONSTRAINT ch_nn_pizzeria_id CHECK (pizzeria_id IS NOT NULL),
+    ADD CONSTRAINT ch_nn_discount CHECK (discount IS NOT NULL),
+    ALTER COLUMN discount SET DEFAULT 0,
+    ADD CONSTRAINT ch_range_discount CHECK (discount >= 0 AND discount <= 100);
 ```
+![image](https://github.com/CheAm1337/select/assets/115126424/8a1ffaee-7198-4fcc-90ce-650fd1d2a9c7)
+
+## Task - 05
+```sql
+COMMENT ON TABLE person_discounts IS 'Эта таблица хранит информацию о персональных скидках.';
+
+COMMENT ON COLUMN person_discounts.person_id IS 'Идентификатор человека.';
+COMMENT ON COLUMN person_discounts.pizzeria_id IS 'Идентификатор пиццерии.';
+COMMENT ON COLUMN person_discounts.discount IS 'Процентная скидка скидки.';
+```
+![image](https://github.com/CheAm1337/select/assets/115126424/7cb50f0b-32a8-4248-b06a-1a2a584fefb7)
