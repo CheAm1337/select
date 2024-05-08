@@ -42,3 +42,11 @@ VALUES
     @services_list;
 ```
 
+## Task 3
+
+```sql
+SELECT u.name, SUM(r.total_sum) AS sum, GROUP_CONCAT(s.services) AS servicesFROM users u
+JOIN records r ON u.id = r.user_id JOIN service_records sr ON r.id = sr.record_id 
+JOIN services s ON sr.service_id = s.idWHERE u.id = 1
+GROUP BY u.name;
+```
