@@ -20,3 +20,25 @@ GROUP BY
   r.date,
   r.totalsum;
 ```
+
+## Task 2
+
+```sql
+
+
+INSERT INTO records (user_id, date, totalsum)
+VALUES (
+    @user_id,
+    @date,
+    @totalsum
+);
+
+
+SET @records_id = LAST_INSERT_ID();
+
+
+INSERT INTO services_records (service_id, records_id)
+VALUES
+    @services_list;
+```
+
