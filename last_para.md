@@ -21,7 +21,7 @@ GROUP BY
   r.totalsum;
 ```
 
-## Task 2
+## Task 2 по отдельности выполнить
 
 ```sql
 INSERT INTO records (user_id, date, totalsum)
